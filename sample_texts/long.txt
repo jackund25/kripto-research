@@ -1,0 +1,72 @@
+Information security is a multidisciplinary field that draws from mathematics, computer science,
+electrical engineering, and even psychology. At its core, the discipline seeks to ensure that
+digital information remains confidential, intact, and available to authorized users while being
+protected against unauthorized access, modification, or disclosure. The rapid expansion of the
+internet and mobile computing has made information security more critical than ever before in
+human history.
+
+Cryptography, the study of techniques for secure communication, has a history dating back to
+ancient civilizations. The Caesar cipher, attributed to Julius Caesar, was one of the earliest
+known substitution ciphers, shifting each letter of the alphabet by a fixed number of positions.
+Over the centuries, cryptographic methods grew more sophisticated, culminating in the development
+of modern symmetric and asymmetric encryption algorithms that underpin all secure digital
+communications today, from online banking to encrypted messaging applications.
+
+Steganography, derived from the Greek words for covered writing, is the practice of concealing
+a secret message within an ordinary, non-secret piece of information. Unlike cryptography, which
+makes a message unintelligible to anyone without the decryption key, steganography hides the
+very fact that a secret message exists at all. A successful steganographic system makes it
+impossible or extremely difficult for an observer to determine whether any hidden communication
+is occurring, even if they suspect that it might be.
+
+Digital steganography has evolved rapidly since the widespread adoption of digital media formats.
+Early techniques focused on modifying the least significant bits of pixel values in digital images,
+a method known as LSB steganography. Because the human visual system is relatively insensitive to
+small changes in pixel intensity, these modifications are typically invisible to casual observers.
+Similar techniques have been developed for audio files, video streams, and document formats,
+making digital steganography a versatile tool for information hiding across many media types.
+
+Text steganography presents unique challenges compared to image or audio steganography because
+text documents have far fewer redundant bits that can be modified without detection. Early text
+steganographic methods included adjusting word spacing, modifying line heights, or substituting
+synonyms in ways that preserved the meaning of the document while encoding hidden information.
+These approaches were limited in capacity and often detectable through careful formatting analysis,
+prompting researchers to seek more robust solutions based on the Unicode character standard.
+
+The Unicode standard currently defines more than one hundred and forty thousand distinct characters
+covering virtually every writing system used by humans. Among these characters are numerous
+whitespace code points that are visually rendered identically to the standard space character by
+most applications and rendering engines. These include characters such as the thin space, the
+hair space, the no-break space, and various width-specific space characters defined in the
+Unicode General Punctuation block, all of which appear as blank space to the reader.
+
+By replacing ordinary space characters in a cover text with carefully chosen Unicode whitespace
+alternatives, a steganographic system can encode binary information within the document without
+altering its visual appearance. The number of distinct Unicode space characters used as the
+encoding alphabet determines the information density of the system. With four characters, each
+space encodes two bits, while sixteen characters allow four bits to be encoded per space position,
+doubling the effective capacity of the steganographic channel.
+
+The security of Unicode whitespace steganography depends on several factors. First, the selection
+of Unicode characters must be made carefully to avoid characters that are rendered visibly
+differently in common fonts or text rendering engines. Second, the distribution of the substituted
+characters should ideally match the statistical expectations of normal text, as anomalous frequency
+distributions can be detected by automated steganalysis tools. Third, the overall system must
+account for the possibility that text may be processed by applications that normalize Unicode
+whitespace, which could destroy the hidden message entirely.
+
+Experimental evaluation of Unicode steganography systems typically involves measuring embedding
+capacity in terms of bits per character or bits per space, as well as the increase in file size
+that results from replacing single-byte ASCII space characters with multi-byte Unicode alternatives.
+Most Unicode whitespace characters in the General Punctuation block are encoded as three bytes in
+UTF-8, compared to one byte for the standard ASCII space. This means that converting all spaces
+in a document to Unicode alternatives will increase the file size by approximately twice the
+number of spaces multiplied by two bytes each, resulting in a predictable and measurable overhead.
+
+The practical applications of text steganography extend beyond covert communication to include
+digital watermarking, where authors embed invisible identifiers within their documents to prove
+ownership or track unauthorized copying. News agencies and document management systems have
+explored steganographic watermarking as a means of identifying the source of leaked documents.
+However, the same techniques that enable legitimate security applications can also be misused,
+highlighting the importance of responsible research and disclosure practices in the steganography
+community and the broader information security field.

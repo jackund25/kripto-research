@@ -1,0 +1,9 @@
+The field of information security has grown significantly in recent decades. Modern digital
+communication systems rely on cryptographic protocols to protect sensitive data from unauthorized
+access. These systems use mathematical algorithms to transform plaintext into ciphertext, ensuring
+that only authorized parties can read the original message.
+
+Beyond encryption, steganography offers an alternative approach to secure communication by
+concealing the existence of a message within an ordinary carrier medium. This technique embeds
+secret data inside images, audio files, or text documents in ways that are imperceptible to
+human observers and difficult for automated detection systems to identify reliably.

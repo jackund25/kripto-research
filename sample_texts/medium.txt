@@ -1,0 +1,32 @@
+Information hiding is a broad discipline that encompasses both cryptography and steganography.
+While cryptography focuses on making information unreadable to unauthorized parties, steganography
+goes further by concealing the very existence of a secret message. Together, these two techniques
+form a powerful framework for secure and covert digital communication in modern networks.
+
+The history of steganography stretches back thousands of years. Ancient Greeks shaved the heads
+of messengers, tattooed secret messages on their scalps, and waited for the hair to grow back
+before sending them on their way. During World War II, invisible ink and microdots were used
+extensively to pass intelligence between agents. Today, digital steganography has replaced these
+physical methods with sophisticated computational techniques that can hide data in virtually any
+type of digital media.
+
+Unicode-based text steganography is a particularly elegant approach to information hiding. Modern
+text encoding standards support hundreds of thousands of distinct characters, many of which are
+visually indistinguishable from ordinary whitespace. By substituting regular space characters
+with these visually identical Unicode alternatives, it is possible to embed binary data directly
+within plain text documents without altering their visible appearance in any detectable way.
+
+The capacity of a text steganography system depends on the number of available embedding slots
+and the number of bits encoded per slot. A system using four distinct Unicode space characters
+encodes two bits per space, while a system with sixteen characters can encode four bits per
+space. This relationship means that expanding the alphabet can significantly increase the amount
+of secret data that can be concealed within a given cover text, making it a valuable parameter
+for optimizing steganographic capacity.
+
+Detection of Unicode-based steganography requires specialized analysis tools capable of examining
+the byte-level representation of text files. Standard text editors and word processors typically
+render all whitespace characters identically, making visual inspection alone insufficient for
+detection. Forensic analysis must therefore operate at the Unicode code point level, comparing
+the actual character values used for spacing against the expected distribution of normal text.
+This requirement for specialized tools provides a meaningful layer of security for legitimate
+covert communication applications.
