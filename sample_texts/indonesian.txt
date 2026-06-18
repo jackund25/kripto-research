@@ -1,0 +1,9 @@
+Steganografi adalah ilmu dan seni menyembunyikan informasi di dalam media lain sehingga keberadaan pesan tersembunyi tidak terdeteksi oleh pihak yang tidak berwenang. Berbeda dengan kriptografi yang bertujuan membuat pesan tidak terbaca, steganografi bertujuan membuat pesan tidak terlihat sama sekali.
+
+Dalam era digital, steganografi teks memanfaatkan karakteristik Unicode untuk menyisipkan bit-bit informasi ke dalam dokumen teks biasa. Karakter spasi Unicode seperti U+2004 (Three-Per-Em Space) dan U+202F (Narrow No-Break Space) secara visual identik dengan spasi biasa U+0020 namun memiliki nilai codepoint yang berbeda, sehingga dapat digunakan sebagai medium penyisipan tanpa mengubah tampilan teks.
+
+Metode TREND yang dikembangkan oleh Hellmeier et al. pada tahun 2025 memanfaatkan empat karakter spasi Unicode sebagai alfabet biner, memungkinkan penyisipan dua bit informasi per karakter spasi. Pendekatan ini menghasilkan kapasitas embedding yang sebanding dengan jumlah spasi dalam dokumen sumber, dengan overhead ukuran file yang bergantung pada ukuran encoding UTF-8 dari karakter stego yang dipilih.
+
+Keamanan metode ini bergantung pada asumsi bahwa pengamat tidak mengetahui keberadaan pesan tersembunyi dan tidak melakukan analisis statistik terhadap distribusi karakter spasi dalam dokumen. Dengan demikian, steganografi Unicode whitespace cocok digunakan sebagai lapisan tambahan keamanan di atas sistem kriptografi yang sudah ada.
+
+Penelitian ini mengkaji tiga varian alfabet dengan kapasitas berbeda: alfabet 4 karakter memberikan dua bit per spasi, alfabet 8 karakter memberikan tiga bit per spasi, dan alfabet 16 karakter memberikan empat bit per spasi. Setiap penambahan satu bit per spasi menambah kapasitas total sebesar lima puluh persen dari kapasitas sebelumnya tanpa meningkatkan overhead ukuran file secara signifikan.
